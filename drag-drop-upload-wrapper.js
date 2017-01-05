@@ -1,9 +1,6 @@
 (function ($) {
     var sanitized_options = function(opts) {
         var default_options = {
-            image_type: 'article',
-            image_desc_sel: '',
-            image_url_sel: '',
             upload_callback: void 0,
             dragenter_css_callback: function () {
                 $(this).css('border', '2px solid #0B85A1');
@@ -37,8 +34,6 @@
                     upload_file: function (file) {
                         var fd = new FormData();
                         fd.append('upload_file', file);
-                        fd.append('url', opts.image_url_sel ? $(opts.image_url_sel).val() : '');
-                        fd.append('descr', opts.image_desc_sel ? $(opts.image_desc_sel).val() : '');
                         return (
                             $.ajax({
                                 url: '/api/admin/image/upload_image/' + opts.image_type,

@@ -1,13 +1,13 @@
 (function ($) {
     var sanitized_options = function(opts) {
         var default_options = {
-            upload_file: void 0,          // 上传文件(必填,$.ajax().then())
-            upload_callback: void 0,      // 上传成功回调函数
-            dragenter_css_callback: opts.dragenter_css_callback,    // 图片进入拖拽区域CSS样式回调函数
-            dragover_css_callback: opts.dragover_css_callback,      // 图片在拖拽区域移动时CSS样式回调函数
-            drop_css_callback: opts.drop_css_callback,              // 图片在拖拽区域松手后CSS样式回调函数
-            uploading_css_callback: opts.uploading_css_callback,    // 图片在上传过程中CSS样式回调函数
-            uploaded_css_callback: opts.uploaded_css_callback       // 图片上传成功后CSS样式回调函数
+            upload_file: void 0,                // 上传文件(必填,$.ajax().then())
+            upload_callback: void 0,            // 上传成功回调函数
+            dragenter_css_callback: void 0,     // 图片进入拖拽区域CSS样式回调函数
+            dragover_css_callback: void 0,      // 图片在拖拽区域移动时CSS样式回调函数
+            drop_css_callback: void 0,          // 图片在拖拽区域松手后CSS样式回调函数
+            uploading_css_callback: void 0,     // 图片在上传过程中CSS样式回调函数
+            uploaded_css_callback: void 0       // 图片上传成功后CSS样式回调函数
         };
         return $.extend({}, default_options, opts == null ? {} : opts);
     };
